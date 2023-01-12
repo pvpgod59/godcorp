@@ -1,0 +1,136 @@
+// Option, Parametres et Reset
+
+// Import minireset
+
+@import "libs/reset.scss";
+
+$green: #2b7971;
+$light-pink: #fdd8f1;
+$black: #270c25;
+$white: #fcf5f5;
+$border-radius: 20px;
+
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+// Body
+
+body {
+	background-color: $white;
+}
+
+// Navbar
+
+nav {
+	position: fixed;
+	padding: 50px;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	box-sizing: border-box;
+	align-items: center;
+	background-color: $light-pink;
+	height: 100px;
+	z-index: 100;
+
+	img.logo {
+		border-radius: 100%;
+		height: 70px;
+		width: 70px;
+	}
+
+	a {
+		color: $black;
+
+		&:hover {
+			color: $white;
+		}
+
+	}
+
+	.nav-links {
+
+		ul {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			li {
+				margin: 0 30px;
+
+				a.active {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
+	.menu-hamburger {
+		display: none;
+		position: fixed;
+		right: 50px;
+		width: 35px;
+	}
+}
+
+.scroll-block {
+	overflow-y: hidden;
+}
+
+// Média Query
+
+@media screen and (max-width: 900px) {
+
+    // Navbar
+
+	nav {
+		background-color: $light-pink;
+		position: fixed;
+		padding: 0;
+
+		.menu-hamburger {
+			display: block;
+		}
+
+		img.logo {
+			margin-left: 30px;
+			width: 70px;
+			height: 70px;
+		}
+
+		.nav-links {
+            backdrop-filter: blur(7px);
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-color: #ffffff36;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -100%;
+            transition: all 0.5s ease;
+
+			ul {
+
+                display: flex;
+			    flex-direction: column;
+			    align-items: center;
+
+				li {
+					margin: 20% 0;
+					font-size: 1.2em;
+				}
+			}
+		}
+
+		.nav-links.mobile-menu {
+			margin-left: 0;
+		}
+	}
+}
