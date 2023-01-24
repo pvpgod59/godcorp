@@ -18,19 +18,3 @@ function activate(activer) {
     navLinks.classList.remove("mobile-menu")
     body.classList.remove("scroll-block")
 }
-
-// Paralax
-
-let title = document.getElementById("title");
-
-window.addEventListener("scroll", function(){
-    var value = this.window.scrollY;
-
-    if(value < 700 / 5){
-        title.style.translate = "-" + value * 2.7 + "px";
-    }
-    else{
-        title.style.marginLeft = 0 + "px";
-    }
-    
-})
