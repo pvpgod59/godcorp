@@ -18,3 +18,11 @@ function activate(activer) {
     navLinks.classList.remove("mobile-menu")
     body.classList.remove("scroll-block")
 }
+
+// Article
+
+const article = document.getElementById("article")
+
+function enableArticle() {
+    article.classList.toggle("active")
+}

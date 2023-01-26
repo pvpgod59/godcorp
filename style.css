@@ -48,7 +48,7 @@ html {
 }
 
 body {
-  background-color: #f5f9fc;
+  background-color: #e2f3ff;
   height: 10000px;
 }
 
@@ -60,7 +60,7 @@ nav {
   width: 100%;
   box-sizing: border-box;
   align-items: center;
-  background-color: #ffc1f5;
+  background-color: #ffddf9;
   height: 100px;
   z-index: 100;
 }
@@ -69,8 +69,12 @@ nav img.logo {
   height: 70px;
   width: 70px;
 }
+nav a {
+  color: #0af2b4;
+  text-decoration: underline;
+}
 nav a:hover {
-  color: #f5f9fc;
+  color: #bdffc7;
 }
 nav .nav-links ul {
   display: flex;
@@ -96,10 +100,10 @@ nav .menu-hamburger {
 
 header {
   padding-top: 200px;
-  background-color: #4ecb61;
+  background-color: #bdffc7;
   height: 400px;
   width: 100%;
-  color: #f5f9fc;
+  color: #e2f3ff;
 }
 header h1 {
   margin-left: 10%;
@@ -127,13 +131,13 @@ section h2 {
 section h2::before {
   content: "";
   position: absolute;
-  background-color: #4ecb61;
+  background-color: #e2f3ff;
   width: 50px;
   height: 7px;
   bottom: 0;
 }
 section#activities {
-  height: 550px;
+  height: 530px;
   background-color: #b4f6ff;
 }
 section#activities div {
@@ -144,7 +148,7 @@ section#activities div {
   overflow-y: hidden;
 }
 section#activities div div.card {
-  background-color: #4ecb61;
+  background-color: #e2f3ff;
   margin-left: 50px;
   margin-right: 50px;
   min-width: 250px;
@@ -165,10 +169,38 @@ section#activities div div.card img {
   height: 70%;
 }
 
+article {
+  transition: all 0.5s;
+  z-index: -1;
+  translate: 0 -100%;
+  background: linear-gradient(#b4f6ff, #b4f6ff);
+  margin-left: 0;
+  height: 150px;
+  position: relative;
+  margin-bottom: 200px;
+}
+article svg {
+  transition: all 0.5s;
+  transform: scaleY(-1);
+  position: absolute;
+  width: 100%;
+  bottom: -150px;
+  fill: #b4f6ff;
+  fill-opacity: 1;
+}
+article.active {
+  position: relative;
+  translate: 0 0;
+  background: linear-gradient(#b4f6ff, #bdffc7);
+}
+article.active svg {
+  fill: #bdffc7;
+}
+
 @media screen and (max-width: 500px) {
   header {
     padding-top: 200px;
-    background-color: #4ecb61;
+    background-color: #bdffc7;
     height: 300px;
   }
   header h1 {
@@ -184,7 +216,7 @@ section#activities div div.card img {
 }
 @media screen and (max-width: 900px) {
   nav {
-    background-color: #ffc1f5;
+    background-color: #ffddf9;
     position: fixed;
     padding: 0;
   }

@@ -4,11 +4,12 @@
 
 @import "libs/reset.scss";
 
-$gray: #ffc1f5;
-$light-gray: #4ecb61;
+$light-pink: #ffddf9;
+$light-green: #bdffc7;
 $black: #100c0c;
-$white: #f5f9fc;
-$blue: #b4f6ff;
+$white: #e2f3ff;
+$light-blue: #b4f6ff;
+$green: #0af2b4;
 $border-radius: 20px;
 
 * {
@@ -37,7 +38,7 @@ nav {
 	width: 100%;
 	box-sizing: border-box;
 	align-items: center;
-	background-color: $gray;
+	background-color: $light-pink;
 	height: 100px;
 	z-index: 100;
 
@@ -48,25 +49,25 @@ nav {
 	}
 
 	a {
+		color: $green;
+		text-decoration: underline;
 
 		&:hover {
-			color: $white;
+			color: $light-green;
 		}
 
 	}
 
-	.nav-links {
+	.nav-links ul{
 
-		ul {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			li {
-				margin: 0 30px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		li {
+			margin: 0 30px;
 
-				a.active {
-					font-weight: 600;
-				}
+			a.active {
+				font-weight: 600;
 			}
 		}
 	}
@@ -87,7 +88,7 @@ nav {
 
 header{
 	padding-top: 200px;
-	background-color: $light-gray;
+	background-color: $light-green;
 	height: 400px;
 	width: 100%;
 	color: $white;
@@ -113,6 +114,7 @@ section{
 		padding-left: 5%;
 		padding-top: 250px;
 	}
+	
 
 	.section-content{
 		margin-left: 10px;
@@ -126,7 +128,7 @@ section{
 		&::before {
 			content: "";
 			position: absolute;
-			background-color: $light-gray;
+			background-color: $white;
 			width: 50px;
 			height: 7px;
 			bottom: 0;
@@ -134,8 +136,8 @@ section{
 	}
 
 	&#activities{
-		height: 550px;
-		background-color: $blue;
+		height: 530px;
+		background-color: $light-blue;
 
 		div{
 			display: flex;
@@ -145,7 +147,7 @@ section{
 			overflow-y: hidden;
 
 			div.card{
-				background-color: $light-gray;
+				background-color: $white;
 				margin-left: 50px;
 				margin-right: 50px;
 				min-width: 250px;
@@ -168,8 +170,40 @@ section{
 				}
 			}
 		}
+
 	}
 	
+}
+
+article{
+	transition: all 0.5s;
+	z-index: -1;
+	translate: 0 -100%;
+	background: linear-gradient($light-blue, $light-blue);
+	margin-left: 0;
+	height: 150px;
+	position: relative;
+	margin-bottom: 200px;
+
+	svg{
+		transition: all 0.5s;
+		transform: scaleY(-1);
+		position: absolute;
+		width: 100%;
+		bottom: -150px;
+		fill: $light-blue;
+		fill-opacity: 1;
+	}
+
+	&.active{
+		position: relative;
+		translate: 0 0;
+		background: linear-gradient($light-blue, $light-green);
+		
+		svg{
+			fill: $light-green;
+		}
+	}
 }
 
 // Média Query
@@ -179,7 +213,7 @@ section{
 
 	header{
 		padding-top: 200px;
-		background-color: $light-gray;
+		background-color: $light-green;
 		height: 300px;
 
 		h1{
@@ -201,7 +235,7 @@ section{
     // Navbar
 
 	nav {
-		background-color: $gray;
+		background-color: $light-pink;
 		position: fixed;
 		padding: 0;
 
