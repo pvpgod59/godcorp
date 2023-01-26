@@ -184,7 +184,7 @@ article svg {
   transform: scaleY(-1);
   position: absolute;
   width: 100%;
-  bottom: -150px;
+  top: 100%;
   fill: #b4f6ff;
   fill-opacity: 1;
 }
