@@ -115,6 +115,15 @@ header h3 {
   margin-top: 30px;
   font-size: 20px;
 }
+header svg {
+  position: absolute;
+  transform: scaleY(-1);
+  bottom: 200px;
+  position: absolute;
+  width: 100%;
+  fill: #bdffc7;
+  fill-opacity: 1;
+}
 
 section.section-marge {
   padding-left: 5%;
@@ -160,6 +169,7 @@ section#activities div div.card {
   justify-content: space-around;
   border-radius: 20px;
   overflow: hidden;
+  cursor: pointer;
 }
 section#activities div div.card h3 {
   font-size: 20px;

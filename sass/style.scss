@@ -104,6 +104,16 @@ header{
 		margin-top: 30px;
 		font-size: 20px;
 	}
+
+	svg{
+		position: absolute;
+		transform: scaleY(-1);
+		bottom: 200px;
+		position: absolute;
+		width: 100%;
+		fill: $light-green;
+		fill-opacity: 1;
+	}
 }
 
 // Sections
@@ -159,6 +169,7 @@ section{
 				justify-content: space-around;
 				border-radius: $border-radius;
 				overflow: hidden;
+				cursor: pointer;
 
 				h3{
 					font-size: 20px;
