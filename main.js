@@ -19,7 +19,8 @@ function activate(activer) {
 
 // Activities
 
-let requestURL = 'pvpgod59.github.io/godcorp/activities.json';
+let requestURL = './activities.json';
+
 let request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
